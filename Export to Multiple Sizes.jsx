@@ -1,8 +1,8 @@
-// Photoshop Script to Create iPhone Icons from iTunesArtwork
+// Photoshop Script to Create iPhone Icons from Photoshop file
 //
 // WARNING!!! In the rare case that there are name collisions, this script will
 // overwrite (delete perminently) files in the same folder in which the selected
-// iTunesArtwork file is located. Therefore, to be safe, before running the
+// icons file is located. Therefore, to be safe, before running the
 // script, it's best to make sure the selected iTuensArtwork file is the only
 // file in its containing folder.
 //
@@ -28,12 +28,12 @@
 // THE SOFTWARE.
 //
 // Prerequisite:
-// First, create at least a 1024x1024 px PNG file according to:
-// http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/BuildTimeConfiguration/BuildTimeConfiguration.html
+// First, create at least a 128x128 px PNG file according to:
+// This script will take all the layers in your file and and name them according to the 
+// the layer name and append the extention (i.e. icon.png icon@2x.png, icon@3x) 
 //
-// Install - Save Create Icons.jsx to:
-//   Win: C:\Program Files\Adobe\Adobe Utilities\ExtendScript Toolkit CS5\SDK
-//   Mac: /Applications/Utilities/Adobe Utilities/ExtendScript Toolkit CS5/SDK
+// Install - Save 'Export to Multiple Sizes.jsx' to:
+//   Just put the jsx-files into the Presets > Scripts folder.
 // * Restart Photoshop
 //
 // Update:
@@ -51,6 +51,7 @@
 
 // Turn debugger on. 0 is off.
 // $.level = 1;
+
 
 try {    
     var doc = app.activeDocument;
